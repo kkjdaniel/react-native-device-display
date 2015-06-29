@@ -1,0 +1,33 @@
+{
+  "name": "react-native-display-view",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node_modules/react-native/packager/packager.sh"
+  },
+  "dependencies": {
+    "react-native": "^0.6.0"
+  },
+  "description": "A simple way to detect the devices view type and the orientation, allowing the creation of adaptable and universal apps.",
+  "main": "display.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkjdaniel/react-native-display-view.git"
+  },
+  "keywords": [
+    "react-component",
+    "react-native",
+    "ios",
+    "display",
+    "viewport",
+    "device",
+    "orientation"
+  ],
+  "author": "Karl Daniel <me@karldaniel.co.uk> (http://www.karldaniel.co.uk)",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/kkjdaniel/react-native-display-view/issues"
+  },
+  "homepage": "https://github.com/kkjdaniel/react-native-display-view#readme"
+}
