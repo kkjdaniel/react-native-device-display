@@ -31,5 +31,5 @@ var Display = require('react-native-device-display');
 `Display.height`
 > Height in `pixels` of the device
 
-#TO-DO
+## TO-DO
 - Add `EventListener` for orientation change
