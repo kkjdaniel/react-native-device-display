@@ -34,7 +34,7 @@ class Display {
   }
 
   isPortrait() {
-    if (this.width > this.height) {
+    if (this.width < this.height) {
       return true;
     } else {
       return false;
@@ -42,7 +42,7 @@ class Display {
   }
 
   isLandscape() {
-    if (this.width < this.height) {
+    if (this.width > this.height) {
       return true;
     } else {
       return false;
