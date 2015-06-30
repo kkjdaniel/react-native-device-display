@@ -49,10 +49,6 @@ class Display {
     }
   }
 
-  onOrientationChange(handler: function) {
-    this.addEventListener('onOrientationChange', handler, false);
-  );
-
 }
 
 module.exports = new Display();
