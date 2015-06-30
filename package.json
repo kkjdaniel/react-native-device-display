@@ -1,6 +1,6 @@
 {
   "name": "react-native-device-display",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "private": false,
   "scripts": {
     "start": "node_modules/react-native/packager/packager.sh"
@@ -8,7 +8,7 @@
   "dependencies": {
     "react-native": "^0.6.0"
   },
-  "description": "A simple way to detect the devices view type and the orientation, allowing the creation of adaptable and universal apps.",
+  "description": "A simple way to create dynamic views through device and display detection, allowing the creation of adaptable and universal apps.",
   "main": "display.js",
   "devDependencies": {},
   "repository": {
