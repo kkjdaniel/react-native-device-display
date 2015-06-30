@@ -1,7 +1,7 @@
 # react-native-device-display
 A simple way to detect the devices view type and the orientation, allowing the creation of adaptable and universal apps.
 
-#Installation
+## Installation
 Simply install the package as shown below...
 ```install
 $ npm install react-native-device-display
@@ -11,7 +11,7 @@ Then require it in your project wherever you need it...
 var Display = require('react-native-device-display');
 ```
 
-#Methods
+## Methods
 `Display.isTablet();`
 > Returns `true` if the the device is a tablet (e.g iPad)
 
@@ -24,7 +24,7 @@ var Display = require('react-native-device-display');
 `Display.isPortrait();`
 > Returns `true` if the the device is in a landscape position
 
-#Properties
+## Properties
 `Display.width`
 > Width in `pixels` of the device
 
