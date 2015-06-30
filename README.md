@@ -21,7 +21,7 @@ var Display = require('react-native-device-display');
 `Display.isPortrait();`
 > Returns `true` if the the device is in a portrait position 
 
-`Display.isPortrait();`
+`Display.isLandscape();`
 > Returns `true` if the the device is in a landscape position
 
 ## Properties
