@@ -1,7 +1,7 @@
 # react-native-device-display
 A simple way to create dynamic views through device and display detection, allowing the creation of adaptable and universal apps.
 
-[Example Screenshot](http://i.imgur.com/EuxmMd2.png?1)
+![Example Screenshot](http://i.imgur.com/EuxmMd2.png?1)
 
 ## Installation
 
