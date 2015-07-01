@@ -1,17 +1,21 @@
 # react-native-device-display
 A simple way to create dynamic views through device and display detection, allowing the creation of adaptable and universal apps.
 
+![Example Screenshot](http://i.imgur.com/EuxmMd2l.png?1)
+
 ## Installation
+
 Simply install the package as shown below...
-```install
+```sh
 $ npm install react-native-device-display
 ```
 Then require it in your project wherever you need it...
-```require
+```javascript
 var Display = require('react-native-device-display');
 ```
 
 ## Methods
+
 `Display.percentage(type, value);`
 > Returns in `pixels` the percentage value of the type `width` or `height`
 
@@ -28,11 +32,38 @@ var Display = require('react-native-device-display');
 > Returns `true` if the the device is in a landscape position
 
 ## Properties
+
 `Display.width`
 > Width in `pixels` of the device
 
 `Display.height`
 > Height in `pixels` of the device
+
+## Example
+
+```javascript
+var Display = require('react-native-device-display');
+
+var testing = React.createClass({
+
+  render: function() {
+    if (Display.isPhone() && Display.isPortrait()) {
+      return (
+        //Portrait Phone View...
+      );
+    } else if (Display.isPhone() && Display.isLandscape()) {
+      return (
+        //Landscape Phone View...
+      );
+    } else {
+      return (
+        //Non-Phone / Tablet View...
+      );
+    }
+  }
+  
+});
+```
 
 ## TO-DO
 - Add `EventListener` for orientation / dimension change
