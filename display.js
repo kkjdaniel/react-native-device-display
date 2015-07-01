@@ -18,7 +18,9 @@ class Display {
   }
 
   isTablet() {
-    if (this.width > 899 || this.height > 899) {
+    if ((this.width > 760 || this.height > 899) && this.isPortrait()) {
+      return true;
+    } else if ((this.width > 899 || this.height > 760) && this.isLandscape()) {
       return true;
     } else {
       return false;
@@ -26,7 +28,9 @@ class Display {
   }
 
   isPhone() {
-    if (this.width <= 899 || this.height <= 899) {
+    if ((this.width <= 760 || this.height <= 899) && this.isPortrait()) {
+      return true;
+    } else if ((this.width <= 899 || this.height <= 760) && this.isLandscape()) {
       return true;
     } else {
       return false;

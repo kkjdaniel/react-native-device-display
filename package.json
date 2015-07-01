@@ -1,6 +1,6 @@
 {
   "name": "react-native-device-display",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "private": false,
   "scripts": {
     "start": "node_modules/react-native/packager/packager.sh"
