@@ -1,3 +1,6 @@
+var { NativeModules } = require('react-native');
+
+var DeviceUtil = NativeModules.DisplayDeviceUtil;
 var Dimensions = require('Dimensions');
 var RCTDeviceEventEmitter = require('RCTDeviceEventEmitter');
 
@@ -7,7 +10,7 @@ class Display {
     this.width = newWidth;
     this.height = newHeight;
   }
-  
+
   constructor() {
     this.width = Dimensions.get("window").width;
     this.height = Dimensions.get("window").height;
@@ -40,30 +43,18 @@ class Display {
   }
 
   isTablet() {
-    if ((this.width > 760 || this.height > 899) && this.isPortrait()) {
-      return true;
-    } else if ((this.width > 899 || this.height > 760) && this.isLandscape()) {
-      return true;
-    } else {
-      return false;
-    }
+    return DeviceUtil.isTablet;
   }
 
   isPhone() {
-    if ((this.width <= 760 || this.height <= 899) && this.isPortrait()) {
-      return true;
-    } else if ((this.width <= 899 || this.height <= 760) && this.isLandscape()) {
-      return true;
-    } else {
-      return false;
-    }
+    return DeviceUtil.isPhone;
   }
 
   onOrientationDidChange(handler) {
     var main = this;
-  	RCTDeviceEventEmitter.addListener(
-  		'orientationDidChange',
-  		function(newDimensions) {
+    RCTDeviceEventEmitter.addListener(
+      'orientationDidChange',
+      function(newDimensions) {
         main.updateProps(newDimensions.width, newDimensions.height);
         handler();
       }

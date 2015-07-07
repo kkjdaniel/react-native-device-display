@@ -40,4 +40,14 @@ RCT_EXPORT_MODULE();
   [_bridge.eventDispatcher sendDeviceEventWithName:@"orientationDidChange" body:dimensions];
 }
 
+- (NSDictionary *)constantsToExport {
+  BOOL isPhone = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone;
+  BOOL isTablet = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad;
+  
+  return @{
+    @"isPhone" : @(isPhone),
+    @"isTablet" : @(isTablet)
+  };
+}
+
 @end
