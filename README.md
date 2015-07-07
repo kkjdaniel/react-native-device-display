@@ -78,15 +78,15 @@ var testing = React.createClass({
 With Event Listener...
 
 ```javascript
-  var Display = require('react-native-device-display');
+var Display = require('react-native-device-display');
 
-  var testing = React.createClass({
+var testing = React.createClass({
 
-    componentDidMount: function() {
-      Device.onOrientationDidChange(function() {
-        //Change States, Perform Magic, etc...
-      });
-    }
+  componentDidMount: function() {
+    Device.onOrientationDidChange(function() {
+      //Change States, Perform Magic, etc...
+    });
+  }
 
-  });
+});
 ```
