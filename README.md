@@ -1,7 +1,7 @@
 # react-native-device-display
 A simple way to create dynamic views through device and display detection, allowing the creation of adaptable and universal apps.
 
-![Example Screenshot](http://i.imgur.com/EuxmMd2l.png?1)
+![Example GIF Demo](http://i.imgur.com/RKYZf3i.gif)
 
 ## Installation
 
@@ -9,6 +9,11 @@ Simply install the package as shown below...
 ```sh
 $ npm install react-native-device-display
 ```
+
+To use the `Orientation Event Listener` you need to add the custom DisplayDeviceUtil(.h/.m) classes to your projec, these come bundled inside the NPM package.
+
+![Classes Installation Visual](http://i.imgur.com/vT2qGfr.png)
+
 Then require it in your project wherever you need it...
 ```javascript
 var Display = require('react-native-device-display');
@@ -31,6 +36,9 @@ var Display = require('react-native-device-display');
 `Display.isLandscape();`
 > Returns `true` if the the device is in a landscape position
 
+`Display.onOrientationChange(handler)`
+> Triggers the `handler` call back when the orientation of the device changes as well as updating the dimension properties
+
 ## Properties
 
 `Display.width`
@@ -40,6 +48,8 @@ var Display = require('react-native-device-display');
 > Height in `pixels` of the device
 
 ## Example
+
+Simple Implementation (without Event Listener & Classes)...
 
 ```javascript
 var Display = require('react-native-device-display');
@@ -65,5 +75,18 @@ var testing = React.createClass({
 });
 ```
 
-## TO-DO
-- Add `EventListener` for orientation / dimension change
+With Event Listener...
+
+```javascript
+  var Display = require('react-native-device-display');
+
+  var testing = React.createClass({
+
+    componentDidMount: function() {
+      Device.onOrientationDidChange(function() {
+        //Change States, Perform Magic, etc...
+      });
+    }
+
+  });
+```

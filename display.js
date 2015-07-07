@@ -1,7 +1,13 @@
 var Dimensions = require('Dimensions');
+var RCTDeviceEventEmitter = require('RCTDeviceEventEmitter');
 
 class Display {
 
+  updateProps(newWidth, newHeight) {
+    this.width = newWidth;
+    this.height = newHeight;
+  }
+  
   constructor() {
     this.width = Dimensions.get("window").width;
     this.height = Dimensions.get("window").height;
@@ -14,6 +20,22 @@ class Display {
       return value * (this.width / 100);
     } else {
       return 'Invalid Type (width / height)';
+    }
+  }
+
+  isPortrait() {
+    if (this.width < this.height) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  isLandscape() {
+    if (this.width > this.height) {
+      return true;
+    } else {
+      return false;
     }
   }
 
@@ -37,20 +59,15 @@ class Display {
     }
   }
 
-  isPortrait() {
-    if (this.width < this.height) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-  isLandscape() {
-    if (this.width > this.height) {
-      return true;
-    } else {
-      return false;
-    }
+  onOrientationDidChange(handler) {
+    var main = this;
+  	RCTDeviceEventEmitter.addListener(
+  		'orientationDidChange',
+  		function(newDimensions) {
+        main.updateProps(newDimensions.width, newDimensions.height);
+        handler();
+      }
+    );
   }
 
 }
