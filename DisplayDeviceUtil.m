@@ -25,8 +25,6 @@ RCT_EXPORT_MODULE();
 }
 
 - (void)displayOrientationDidChange:(NSNotification*)note {
-  static NSDictionary *dimensions;
-  
   CGSize frameSize = [UIScreen mainScreen].applicationFrame.size;
   
   /* For Non-Orientation Dependant Versions */
@@ -35,8 +33,8 @@ RCT_EXPORT_MODULE();
     frameSize = CGSizeMake(frameSize.height, frameSize.width);
   }
   
-  dimensions = @{ @"width": @(frameSize.width), @"height": @(frameSize.height) };
-  
+  NSDictionary *dimensions = @{ @"width": @(frameSize.height), @"height": @(frameSize.width) };
+  NSLog(@"%@", dimensions);
   [_bridge.eventDispatcher sendDeviceEventWithName:@"orientationDidChange" body:dimensions];
 }
 
