@@ -1,7 +1,6 @@
 # react-native-device-display
 A simple way to create dynamic views through device and display detection, allowing the creation of adaptable and universal apps.
 
-[![npm version](https://badge.fury.io/js/react-native-device-display.svg)](http://badge.fury.io/js/react-native-device-display)
 [![GitHub issues](https://img.shields.io/github/issues/kkjdaniel/react-native-device-display.svg)](https://github.com/kkjdaniel/react-native-device-display/issues)
 [![GitHub license](https://img.shields.io/badge/license-GPLv2-blue.svg)](https://raw.githubusercontent.com/kkjdaniel/react-native-device-display/master/LICENSE)
 [![GitHub license](https://img.shields.io/npm/v/react-native-device-display.svg)](https://www.npmjs.com/package/react-native-device-display)
