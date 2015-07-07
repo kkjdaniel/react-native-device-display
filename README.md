@@ -1,6 +1,13 @@
 # react-native-device-display
 A simple way to create dynamic views through device and display detection, allowing the creation of adaptable and universal apps.
 
+[![npm version](https://badge.fury.io/js/react-native-device-display.svg)](http://badge.fury.io/js/react-native-device-display)
+[![GitHub issues](https://img.shields.io/github/issues/kkjdaniel/react-native-device-display.svg)](https://github.com/kkjdaniel/react-native-device-display/issues)
+[![GitHub license](https://img.shields.io/badge/license-GPLv2-blue.svg)](https://raw.githubusercontent.com/kkjdaniel/react-native-device-display/master/LICENSE)
+[![GitHub license](https://img.shields.io/npm/v/react-native-device-display.svg)](https://www.npmjs.com/package/react-native-device-display)
+[![GitHub license](https://img.shields.io/npm/dm/react-native-device-display.svg)](https://www.npmjs.com/package/react-native-device-display)
+
+
 ![Example GIF Demo](http://i.imgur.com/RKYZf3i.gif)
 
 ## Installation
@@ -10,7 +17,7 @@ Simply install the package as shown below...
 $ npm install react-native-device-display
 ```
 
-To use the `Orientation Event Listener` you need to add the custom DisplayDeviceUtil(.h/.m) classes to your projec, these come bundled inside the NPM package.
+Next in order to access the `Event Listener` and `Device Type` methods you need to import the `DisplayDeviceUtil` classes into your project, these come bundled inside the NPM package.
 
 ![Classes Installation Visual](http://i.imgur.com/vT2qGfr.png)
 
@@ -42,14 +49,14 @@ var Display = require('react-native-device-display');
 ## Properties
 
 `Display.width`
-> Width in `pixels` of the device
+> Width in `pixels` of the display
 
 `Display.height`
-> Height in `pixels` of the device
+> Height in `pixels` of the display
 
 ## Example
 
-Simple Implementation (without Event Listener & Classes)...
+Simple Implementation (without Event Listener)...
 
 ```javascript
 var Display = require('react-native-device-display');
