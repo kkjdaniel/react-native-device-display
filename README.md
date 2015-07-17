@@ -89,7 +89,7 @@ var Display = require('react-native-device-display');
 var testing = React.createClass({
 
   componentDidMount: function() {
-    Device.onOrientationDidChange(function() {
+    Display.onOrientationDidChange(function() {
       //Change States, Perform Magic, etc...
     });
   }
