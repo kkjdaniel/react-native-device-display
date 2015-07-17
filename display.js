@@ -52,7 +52,7 @@ class Display {
 
   onOrientationDidChange(handler) {
     var main = this;
-    RCTDeviceEventEmitter.addListener(
+    return RCTDeviceEventEmitter.addListener(
       'orientationDidChange',
       function(newDimensions) {
         main.updateProps(newDimensions.width, newDimensions.height);
