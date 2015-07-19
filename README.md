@@ -42,13 +42,13 @@ var Display = require('react-native-device-display');
 Display.width
 ```
 
-*Width in `pixels` of the display*
+> *Width in `pixels` of the display*
 
 ```javascript
 Display.height
 ```
 
-*Height in `pixels` of the display*
+> *Height in `pixels` of the display*
 
 ## Example
 
