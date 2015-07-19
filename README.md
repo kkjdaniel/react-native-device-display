@@ -27,14 +27,14 @@ var Display = require('react-native-device-display');
 
 ## Methods
 
-| Method                                               | Description                                                              |
-|------------------------------------------------------|--------------------------------------------------------------------------|
-| ```javascriptDisplay.percentage(type, value);```     | Returns in `pixels` the percentage value of the type `width` or `height` |
-| ```javascriptDisplay.isTablet();```                  | Returns `true` if the the device is a tablet (e.g iPad)                  |
-| ```javascriptDisplay.isPhone();```                   | Returns `true` if the the device is a phone (e.g iPhone)                 |
-| ```javascriptDisplay.isPortrait();```                | Returns `true` if the the device is in a portrait position               |
-| ```javascriptDisplay.isLandscape();```               | Returns `true` if the the device is in a landscape position              |
-| ```javascriptDisplay.onOrientationChange(handler)``` |                                                                          |
+| Method                                                 | Description                                                                                                              |
+|--------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| ```javascript Display.percentage(type, value); ```     | Returns in `pixels` the percentage value of the type `width` or `height`                                                 |
+| ```javascript Display.isTablet(); ```                  | Returns `true` if the the device is a tablet (e.g iPad)                                                                  |
+| ```javascript Display.isPhone(); ```                   | Returns `true` if the the device is a phone (e.g iPhone)                                                                 |
+| ```javascript Display.isPortrait(); ```                | Returns `true` if the the device is in a portrait position                                                               |
+| ```javascript Display.isLandscape(); ```               | Returns `true` if the the device is in a landscape position                                                              |
+| ```javascript Display.onOrientationChange(handler) ``` | Triggers the `handler` call back when the orientation of the device changes as well as updating the dimension properties |
 
 ## Properties
 
