@@ -34,7 +34,7 @@ var Display = require('react-native-device-display');
 | `Display.isPhone();`                   | Returns `true` if the the device is a phone (e.g iPhone)                                                                 |
 | `Display.isPortrait();`                | Returns `true` if the the device is in a portrait position                                                               |
 | `Display.isLandscape();`               | Returns `true` if the the device is in a landscape position                                                              |
-| `Display.onOrientationChange(handler)` | Triggers the `handler` call back when the orientation of the device changes |
+| `Display.onOrientationChange(handler)` | Triggers the `handler` call-back when the orientation changes |
 
 ## Properties
 
