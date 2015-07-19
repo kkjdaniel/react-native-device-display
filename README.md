@@ -68,9 +68,13 @@ var testing = React.createClass({
       return (
         //Landscape Phone View...
       );
-    } else {
+    } else if (Display.isTablet() && Display.isPortrait()) {
       return (
-        //Non-Phone / Tablet View...
+        //Portrait Tablet View...
+      );
+    } else if (Display.isTablet() && Display.isLandscape()) {
+      return (
+        //Landscape Tablet View...
       );
     }
   }
@@ -83,12 +87,19 @@ With Event Listener...
 ```javascript
 var Display = require('react-native-device-display');
 
+var listener;
+
 var testing = React.createClass({
 
   componentDidMount: function() {
-    Display.onOrientationDidChange(function() {
+    listener = Display.onOrientationDidChange(function() {
       //Change States, Perform Magic, etc...
     });
+  },
+
+  componentWillUnmount: function() {
+    //Unlisten the onOrientationChange...
+    listener = null;
   }
 
 });

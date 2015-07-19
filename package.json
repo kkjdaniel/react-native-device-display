@@ -1,11 +1,11 @@
 {
   "name": "react-native-device-display",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "scripts": {
     "start": "node_modules/react-native/packager/packager.sh"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react-native": "^0.6.0"
   },
   "description": "A simple way to create dynamic views through device and display detection, allowing the creation of adaptable and universal apps.",
