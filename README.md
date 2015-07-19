@@ -28,30 +28,38 @@ var Display = require('react-native-device-display');
 ## Methods
 
 `Display.percentage(type, value);`
-> Returns in `pixels` the percentage value of the type `width` or `height`
+
+*Returns in `pixels` the percentage value of the type `width` or `height`*
 
 `Display.isTablet();`
-> Returns `true` if the the device is a tablet (e.g iPad)
+
+*Returns `true` if the the device is a tablet (e.g iPad)*
 
 `Display.isPhone();`
-> Returns `true` if the the device is a phone (e.g iPhone)
+
+*Returns `true` if the the device is a phone (e.g iPhone)*
 
 `Display.isPortrait();`
-> Returns `true` if the the device is in a portrait position 
+
+*Returns `true` if the the device is in a portrait position*
 
 `Display.isLandscape();`
-> Returns `true` if the the device is in a landscape position
+
+*Returns `true` if the the device is in a landscape position*
 
 `Display.onOrientationChange(handler)`
-> Triggers the `handler` call back when the orientation of the device changes as well as updating the dimension properties
+
+*Triggers the `handler` call back when the orientation of the device changes as well as updating the dimension properties*
 
 ## Properties
 
 `Display.width`
-> Width in `pixels` of the display
+
+*Width in `pixels` of the display*
 
 `Display.height`
-> Height in `pixels` of the display
+
+*Height in `pixels` of the display*
 
 ## Example
 
