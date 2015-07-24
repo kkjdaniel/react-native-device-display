@@ -1,6 +1,6 @@
 {
   "name": "react-native-device-display",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": false,
   "scripts": {
     "start": "node_modules/react-native/packager/packager.sh"
@@ -25,7 +25,7 @@
     "orientation"
   ],
   "author": "Karl Daniel <me@karldaniel.co.uk> (http://www.karldaniel.co.uk)",
-  "license": "GPL-2.0",
+  "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/kkjdaniel/react-native-display-view/issues"
   },
