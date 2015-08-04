@@ -30,7 +30,7 @@ var Display = require('react-native-device-display');
 Display.percentage(type, value);
 ```
 
--> *Returns in `pixels` the percentage value of type `width` or `height`*
+->   *Returns in `pixels` the percentage value of type `width` or `height`*
 
 ```javascript
 Display.isTablet();
