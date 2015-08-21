@@ -75,3 +75,34 @@ Display.height
 ```
 
 Height in `pixels` of the display
+
+## Example
+
+```javascript
+var Display = require('react-native-device-display');
+var listener;
+
+var testing = React.createClass({
+
+  componentDidMount: function() {
+    listener = Display.onOrientationDidChange(function() {
+      //Change States, Perform Magic, etc...
+    });
+  },
+
+  componentWillUnmount: function() {
+    //Unlisten the onOrientationChange...
+    listener = null;
+  },
+  
+  render: function() {
+    if (Display.isPortrait) {
+      //Return portrait view...
+    } else if (Display.isLandscape) {
+      //Return landscape view...
+    } 
+    //Add as many conditions and views as you see fit...
+  }
+  
+});
+```
