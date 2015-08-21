@@ -96,9 +96,9 @@ var testing = React.createClass({
   },
   
   render: function() {
-    if (Display.isPortrait) {
+    if (Display.isPortrait()) {
       //Return portrait view...
-    } else if (Display.isLandscape) {
+    } else if (Display.isLandscape()) {
       //Return landscape view...
     } 
     //Add as many conditions and views as you see fit...
