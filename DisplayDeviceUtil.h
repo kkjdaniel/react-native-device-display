@@ -2,4 +2,6 @@
 
 @interface DisplayDeviceUtil : NSObject <RCTBridgeModule>
 
+- (NSDictionary *)getDimensions;
+
 @end

@@ -1,7 +1,6 @@
 var { NativeModules } = require('react-native');
 
 var DeviceUtil = NativeModules.DisplayDeviceUtil;
-var Dimensions = require('Dimensions');
 var RCTDeviceEventEmitter = require('RCTDeviceEventEmitter');
 
 class Display {
@@ -12,8 +11,8 @@ class Display {
   }
 
   constructor() {
-    this.width = Dimensions.get("window").width;
-    this.height = Dimensions.get("window").height;
+    this.width = DeviceUtil.initialDimensions.width;
+    this.height = DeviceUtil.initialDimensions.height;
   }
 
   percentage(type, value) {
@@ -54,13 +53,27 @@ class Display {
     var main = this;
     return RCTDeviceEventEmitter.addListener(
       'orientationDidChange',
-      function(newDimensions) {
-        main.updateProps(newDimensions.width, newDimensions.height);
-        handler();
+      (/*newDimensions*/) => {
+        // Not sure why, but sometimes dimensions is not updated. But asking
+        // again, it always seems to be correct.
+        this.getFrameSize((newDimensions) => {
+          main.updateProps(newDimensions.width, newDimensions.height);
+          handler();
+        });
       }
     );
   }
 
+  dimensions() {
+    return {
+      width: this.width,
+      height: this.height
+    };
+  }
+
+  getFrameSize(cb) {
+    DeviceUtil.getFrameSize(cb);
+  }
 }
 
 module.exports = new Display();
