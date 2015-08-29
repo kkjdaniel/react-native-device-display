@@ -53,10 +53,10 @@ class Display {
     var main = this;
     return RCTDeviceEventEmitter.addListener(
       'orientationDidChange',
-      (/*newDimensions*/) => {
+      function (/*newDimensions*/) {
         // Not sure why, but sometimes dimensions is not updated. But asking
         // again, it always seems to be correct.
-        this.getFrameSize((newDimensions) => {
+        main.getFrameSize(function (newDimensions) {
           main.updateProps(newDimensions.width, newDimensions.height);
           handler();
         });
