@@ -1,25 +1,26 @@
-# react-native-device-display
+# React Native Device Display
 A simple way to create dynamic views through device and display detection, allowing the creation of adaptable and universal apps. **Currently only for React Native iOS, [Android support](https://github.com/kkjdaniel/react-native-device-display/issues/10) in progress.**
 
 [![GitHub issues](https://img.shields.io/github/issues/kkjdaniel/react-native-device-display.svg)](https://github.com/kkjdaniel/react-native-device-display/issues)
 [![Version](https://img.shields.io/npm/v/react-native-device-display.svg)](https://www.npmjs.com/package/react-native-device-display)
 [![Downloads](https://img.shields.io/npm/dm/react-native-device-display.svg)](https://www.npmjs.com/package/react-native-device-display)
 
-
 ![Example GIF Demo](http://i.imgur.com/RKYZf3i.gif)
 
-## Installation
+## Installation (iOS)
 
 Simply install the package as shown below...
+
 ```sh
 $ npm install react-native-device-display
 ```
 
-Next in order to access the `Event Listener` and `Device Type` methods you need to import the `DisplayDeviceUtil` classes into your project, these come bundled inside the NPM package.
+Next you need to import the `DisplayDeviceUtil` classes into your project, these come bundled inside the NPM package.
 
 ![Classes Installation Visual](http://i.imgur.com/vT2qGfr.png)
 
 Then require it in your project wherever you need it...
+
 ```javascript
 var Display = require('react-native-device-display');
 ```
@@ -86,7 +87,7 @@ var testing = React.createClass({
 
   componentDidMount: function() {
     listener = Display.onOrientationDidChange(function() {
-      //Change States, Perform Magic, etc...
+      //Change States, perform Magic, etc...
     });
   },
 
