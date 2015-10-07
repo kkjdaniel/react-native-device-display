@@ -77,6 +77,13 @@ Display.height
 
 Height in `pixels` of the display
 
+```javascript
+Display.verbose
+```
+
+Defaults to 'false'. 
+Changing it to 'true' enables console.log messages of orientation change events
+
 ## Example
 
 ```javascript
