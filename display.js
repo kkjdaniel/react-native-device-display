@@ -1,6 +1,9 @@
-var { NativeModules } = require('react-native');
+var {
+  NativeModules
+} = require('react-native');
 
 var DeviceUtil = NativeModules.DisplayDeviceUtil;
+var Dimensions = require('Dimensions');
 var RCTDeviceEventEmitter = require('RCTDeviceEventEmitter');
 
 class Display {
@@ -11,8 +14,10 @@ class Display {
   }
 
   constructor() {
-    this.width = DeviceUtil.initialDimensions.width;
-    this.height = DeviceUtil.initialDimensions.height;
+    this.width = Dimensions.get("window").width;
+    this.height = Dimensions.get("window").height;
+    //Enable console messages by changing to true: Display.verbose = true
+    this.verbose = false;
   }
 
   percentage(type, value) {
@@ -53,26 +58,65 @@ class Display {
     var main = this;
     return RCTDeviceEventEmitter.addListener(
       'orientationDidChange',
-      function (/*newDimensions*/) {
-        // Not sure why, but sometimes dimensions is not updated. But asking
-        // again, it always seems to be correct.
-        main.getFrameSize(function (newDimensions) {
-          main.updateProps(newDimensions.width, newDimensions.height);
-          handler();
-        });
+      function(newDimensions) {
+        main.updateProps(newDimensions.width, newDimensions.height);
+        var orientation = main.updateOrientation(newDimensions.orientation);
+        handler(newDimensions.width, newDimensions.height, orientation);
       }
     );
   }
-
-  dimensions() {
-    return {
-      width: this.width,
-      height: this.height
-    };
-  }
-
-  getFrameSize(cb) {
-    DeviceUtil.getFrameSize(cb);
+  updateOrientation(orientation) {
+    var o = {};
+    switch (orientation) {
+      case 1:
+        o = {
+          current: 'portrait',
+          idle: false,
+          facing: ''
+        };
+        break;
+      case 2:
+        o = {
+          current: 'portrait',
+          idle: false,
+          facing: ''
+        };
+        break;
+      case 3:
+        o = {
+          current: 'landscape',
+          idle: false,
+          facing: ''
+        };
+        break;
+      case 4:
+        o = {
+          current: 'landscape',
+          idle: false,
+          facing: ''
+        };
+        break;
+      case 5:
+        o = {
+          current: this.orientation.current,
+          idle: true,
+          facing: 'up'
+        };
+        break;
+      case 6:
+        o = {
+          current: this.orientation.current,
+          idle: true,
+          facing: 'down'
+        };
+        break;
+    }
+    if (this.verbose) {
+      console.log('Orientation Updated');
+      console.log(o);
+    }
+    this.orientation = o;
+    return o;
   }
 }
 
