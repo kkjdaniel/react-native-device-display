@@ -1,10 +1,10 @@
 var {
+  Dimensions,
+  RCTDeviceEventEmitter,
   NativeModules
 } = require('react-native');
 
 var DeviceUtil = NativeModules.DisplayDeviceUtil;
-var Dimensions = require('Dimensions');
-var RCTDeviceEventEmitter = require('RCTDeviceEventEmitter');
 
 class Display {
 
