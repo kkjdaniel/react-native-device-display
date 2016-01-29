@@ -81,8 +81,7 @@ Height in `pixels` of the display
 Display.verbose
 ```
 
-Defaults to 'false'. 
-Changing it to 'true' enables console.log messages of orientation change events
+Defaults to `false`, changing it to `true` enables `console.log` messages of orientation change events
 
 ## Example
 
