@@ -1,6 +1,6 @@
 var {
   Dimensions,
-  RCTDeviceEventEmitter,
+  DeviceEventEmitter,
   NativeModules
 } = require('react-native');
 
@@ -56,7 +56,7 @@ class Display {
 
   onOrientationDidChange(handler) {
     var main = this;
-    return RCTDeviceEventEmitter.addListener(
+    return DeviceEventEmitter.addListener(
       'orientationDidChange',
       function(newDimensions) {
         main.updateProps(newDimensions.width, newDimensions.height);
