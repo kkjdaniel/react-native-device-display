@@ -1,6 +1,6 @@
 var {
-  Dimensions,
   DeviceEventEmitter,
+  Dimensions,
   NativeModules
 } = require('react-native');
 
