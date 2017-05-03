@@ -1,8 +1,10 @@
 # 📲 React Native Device Display
 A simple way to create dynamic views through device, display and orientation detection, allowing the creation of adaptable and universal apps. **Currently only for React Native iOS, [Android support](https://github.com/kkjdaniel/react-native-device-display/issues/10) in progress.**
 
+[![GitHub issues](https://img.shields.io/github/issues/kkjdaniel/react-native-device-display.svg)](https://github.com/kkjdaniel/react-native-device-display/issues)
 [![Version](https://img.shields.io/npm/v/react-native-device-display.svg)](https://www.npmjs.com/package/react-native-device-display)
-[![Downloads](https://img.shields.io/npm/dm/react-native-device-display.svg)](https://www.npmjs.com/package/react-native-device-display)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://www.npmjs.com/package/react-native-device-display)
+[![Downloads](https://img.shields.io/npm/dt/react-native-device-display.svg)](https://www.npmjs.com/package/react-native-device-display)
 
 ![Example GIF Demo](http://i.imgur.com/RKYZf3i.gif)
 
