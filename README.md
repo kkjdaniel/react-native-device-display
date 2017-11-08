@@ -1,5 +1,5 @@
 # 📲 React Native Device Display
-### This package is now **deprecated** as this functionality will now be included as [part of the base React Native](https://github.com/expo/expo/issues/267). In the meantime you can also use [react-native-orientation](https://github.com/yamill/react-native-orientation).
+### This package is now **deprecated** and I am not actively maintaing it. In the meantime you can also use [react-native-orientation](https://github.com/yamill/react-native-orientation).
 
 A simple way to create dynamic views through device, display and orientation detection, allowing the creation of adaptable and universal apps. **Currently only for React Native iOS, [Android support](https://github.com/kkjdaniel/react-native-device-display/issues/10) in progress.**
 
